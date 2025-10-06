@@ -43,13 +43,13 @@ public class Cuenta {
 
 	public void ingresar(int i) {
 		// TODO Auto-generated method stub
-		this.saldo = 500.0;
+		this.saldo += i;
 		
 	}
 
 	public void retirar(int i) {
 		// TODO Auto-generated method stub
-		this.saldo = -500.0;
+		this.saldo -= i;
 	}
 
 }
