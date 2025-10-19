@@ -1,55 +1,39 @@
 package pkg;
 
+import java.util.ArrayList;
+
 public class Cuenta {
 	String numero;
 	String titular;
-	Double saldo;
-	
-	public Cuenta(double i) {
-		// TODO Auto-generated constructor stub
-		this.saldo = i;
-	}
+	double saldo;
+	ArrayList<Movimiento> movimientos;
 
-	public Cuenta(String numero, String titular, Double saldo) {
+	public Cuenta(String numero, String titular, double saldo) {
 		super();
 		this.numero = numero;
 		this.titular = titular;
 		this.saldo = saldo;
+		this.movimientos = new ArrayList<Movimiento>();
 	}
 
 	public String getNumero() {
 		return numero;
 	}
 
-	public void setNumero(String numero) {
-		this.numero = numero;
-	}
-
 	public String getTitular() {
 		return titular;
-	}
-
-	public void setTitular(String titular) {
-		this.titular = titular;
 	}
 
 	public Double getSaldo() {
 		return saldo;
 	}
 
-	public void setSaldo(Double saldo) {
-		this.saldo = saldo;
-	}
-
-	public void ingresar(int i) {
-		// TODO Auto-generated method stub
+	public void ingresar(double i) {
 		this.saldo += i;
 		
 	}
 
-	public void retirar(int i) {
-		// TODO Auto-generated method stub
+	public void retirar(double i) {
 		this.saldo -= i;
 	}
-
 }
