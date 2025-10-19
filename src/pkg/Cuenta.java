@@ -34,7 +34,7 @@ public class Cuenta {
 
 	public void ingresar(double i) {
 		this.saldo += i;
-		this.movimientos.add(new Movimiento(Movimiento.Signo.D, i, ""));
+		this.movimientos.add(new Movimiento(Movimiento.Signo.D, i, "ingreso"));
 		
 	}
 
@@ -46,6 +46,6 @@ public class Cuenta {
 		
 		// Retirar saldo
 		this.saldo -= i;
-		this.movimientos.add(new Movimiento(Movimiento.Signo.H, i, ""));
+		this.movimientos.add(new Movimiento(Movimiento.Signo.H, i, "reintegro"));
 	}
 }
