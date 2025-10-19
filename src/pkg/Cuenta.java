@@ -34,10 +34,18 @@ public class Cuenta {
 
 	public void ingresar(double i) {
 		this.saldo += i;
+		this.movimientos.add(new Movimiento(Movimiento.Signo.D, i, ""));
 		
 	}
 
 	public void retirar(double i) {
+		// Limite de 500 al descubierto
+		if(this.saldo - i < -500) {
+			return;
+		}
+		
+		// Retirar saldo
 		this.saldo -= i;
+		this.movimientos.add(new Movimiento(Movimiento.Signo.H, i, ""));
 	}
 }

@@ -2,11 +2,13 @@ package pkg;
 
 public class Movimiento {
 	public static enum Signo {D, H};
+	Signo signo;
 	double importe;
 	String detalles;
 	
-	public Movimiento(double importe, String detalles) {
+	public Movimiento(Signo signo, double importe, String detalles) {
 		super();
+		this.signo = signo;
 		this.importe = importe;
 		this.detalles = detalles;
 	}
