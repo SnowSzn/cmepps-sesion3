@@ -27,6 +27,10 @@ public class Cuenta {
 	public Double getSaldo() {
 		return saldo;
 	}
+	
+	public void limpiar() {
+		this.saldo = 0;
+	}
 
 	public void ingresar(double i) {
 		this.saldo += i;
